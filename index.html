@@ -115,6 +115,61 @@
       background: #ffffff;
     }
 
+    .apps {
+      margin-top: 26px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(25, 48, 31, 0.06);
+    }
+
+    .apps-title {
+      margin: 0 0 6px;
+      font-size: 1.35rem;
+    }
+
+    .apps-note {
+      margin: 0 0 14px;
+      color: #46644c;
+    }
+
+    .app-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .app-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .app-name {
+      margin: 0;
+      font-size: 1rem;
+      color: #203e29;
+    }
+
+    .app-desc {
+      margin-top: 5px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      color: #215731;
+      background: #eaf7ee;
+      border: 1px solid #cde6d5;
+      border-radius: 999px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
     footer {
       margin-top: 24px;
       text-align: center;
@@ -126,6 +181,10 @@
       .grid {
         grid-template-columns: 1fr;
       }
+
+      .app-item {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -134,8 +193,8 @@
     <section class="hero">
       <h1>OpenLeafWorks</h1>
       <p class="lead">
-        アイディアを現実に変える、個人開発のポートフォリオサイト。<br>
-        なんとなくあったらいいなというアプリを作っています。
+        ものづくりと学びを育てる、個人開発のポートフォリオサイト。<br>
+        Flutter・Web・実験的プロトタイプを公開しています。
       </p>
       <a class="cta" href="https://github.com/openleafworks" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
     </section>
@@ -147,12 +206,40 @@
       </article>
       <article class="card">
         <h2>Projects</h2>
-        <p>クローズドテストのテスターを集めるアプリを作成中。</p>
+        <p>公開中アプリ、UI実験、学習用ミニプロジェクトを順次掲載予定です。</p>
       </article>
       <article class="card">
         <h2>Contact</h2>
-        <p>ご意見や相談はopenleaf.works@gmail.com から気軽にどうぞ。</p>
+        <p>お問い合わせは GitHub の Issue / Discussion から気軽にどうぞ。</p>
       </article>
+    </section>
+
+    <section class="apps" aria-label="開発アプリ一覧">
+      <h2 class="apps-title">開発したアプリ一覧</h2>
+      <p class="apps-note">公開準備中のアプリも含めて、ここに順次追加していきます。</p>
+      <div class="app-list">
+        <article class="app-item">
+          <div>
+            <h3 class="app-name">Hiraku (準備中)</h3>
+            <p class="app-desc">日々の実践を積み上げる学習支援アプリ。記録と振り返りをシンプルに続けられる設計です。</p>
+          </div>
+          <span class="badge">Preview</span>
+        </article>
+        <article class="app-item">
+          <div>
+            <h3 class="app-name">OpenLeaf Notes (準備中)</h3>
+            <p class="app-desc">開発メモと設計判断を時系列で整理する、軽量なログアプリです。</p>
+          </div>
+          <span class="badge">In Progress</span>
+        </article>
+        <article class="app-item">
+          <div>
+            <h3 class="app-name">Prototype Lab (準備中)</h3>
+            <p class="app-desc">UIの試作やアイデア検証を公開する実験スペース。短い周期で更新します。</p>
+          </div>
+          <span class="badge">Coming Soon</span>
+        </article>
+      </div>
     </section>
 
     <footer>© OpenLeafWorks</footer>
