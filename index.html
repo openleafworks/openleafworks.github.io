@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenLeafWorks</title>
+  <style>
+    :root {
+      --bg: #f6f8ef;
+      --surface: #ffffff;
+      --text: #132015;
+      --muted: #4d5b4f;
+      --accent: #2f7a45;
+      --accent-strong: #1d5c30;
+      --line: #dbe4d6;
+      --shadow: 0 12px 30px rgba(23, 56, 35, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, #eaf4e0 0%, transparent 42%),
+        radial-gradient(circle at 90% 20%, #edf7f1 0%, transparent 44%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(960px, 92%);
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #173823 0%, #245934 60%, #2f7a45 100%);
+      color: #f5fff7;
+      border-radius: 20px;
+      padding: 52px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 640px;
+      line-height: 1.8;
+      color: #e8f8eb;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(25, 48, 31, 0.07);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cta {
+      margin-top: 22px;
+      display: inline-block;
+      text-decoration: none;
+      background: #f4fff6;
+      color: var(--accent-strong);
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      color: #5e6e61;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>OpenLeafWorks</h1>
-  <p>This is the official developer website.</p>
+  <main class="container">
+    <section class="hero">
+      <h1>OpenLeafWorks</h1>
+      <p class="lead">
+        ものづくりと学びを育てる、個人開発のポートフォリオサイト。<br>
+        Flutter・Web・実験的プロトタイプを公開しています。
+      </p>
+      <a class="cta" href="https://github.com/openleafworks" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>About</h2>
+        <p>開発メモ、設計思想、運用記録を残しながら、長く育てられるプロダクトづくりを目指しています。</p>
+      </article>
+      <article class="card">
+        <h2>Projects</h2>
+        <p>公開中アプリ、UI実験、学習用ミニプロジェクトを順次掲載予定です。</p>
+      </article>
+      <article class="card">
+        <h2>Contact</h2>
+        <p>コラボや相談は GitHub の Issue / Discussion から気軽にどうぞ。</p>
+      </article>
+    </section>
+
+    <footer>© OpenLeafWorks</footer>
+  </main>
 </body>
 </html>
