@@ -160,6 +160,20 @@
       margin-top: 5px;
     }
 
+    .app-link {
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: #1d5c30;
+      font-weight: 700;
+      border-bottom: 1px solid #1d5c30;
+      padding-bottom: 1px;
+    }
+
+    .app-link:hover {
+      opacity: 0.8;
+    }
+
     .badge {
       font-size: 0.75rem;
       color: #215731;
@@ -216,28 +230,15 @@
 
     <section class="apps" aria-label="開発アプリ一覧">
       <h2 class="apps-title">開発したアプリ一覧</h2>
-      <p class="apps-note">公開準備中のアプリも含めて、ここに順次追加していきます。</p>
+      <p class="apps-note">公開済み・準備中を問わず、ここに順次追加していきます。</p>
       <div class="app-list">
         <article class="app-item">
           <div>
             <h3 class="app-name">Hiraku (準備中)</h3>
             <p class="app-desc">日々の実践を積み上げる学習支援アプリ。記録と振り返りをシンプルに続けられる設計です。</p>
+            <a class="app-link" href="#" target="_blank" rel="noopener noreferrer">アプリページURLをここに設定</a>
           </div>
           <span class="badge">Preview</span>
-        </article>
-        <article class="app-item">
-          <div>
-            <h3 class="app-name">OpenLeaf Notes (準備中)</h3>
-            <p class="app-desc">開発メモと設計判断を時系列で整理する、軽量なログアプリです。</p>
-          </div>
-          <span class="badge">In Progress</span>
-        </article>
-        <article class="app-item">
-          <div>
-            <h3 class="app-name">Prototype Lab (準備中)</h3>
-            <p class="app-desc">UIの試作やアイデア検証を公開する実験スペース。短い周期で更新します。</p>
-          </div>
-          <span class="badge">Coming Soon</span>
         </article>
       </div>
     </section>
